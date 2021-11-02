@@ -17,8 +17,19 @@ Each of these files corresponds to bikeshare data from cities in the USA.
 
 *Some data may not be available for all cities*
 
+### Requirements
+* Hands
+* Computer
+* Python 3.6 or better (**DO NOT USE PYTHON 2**)
+
+### How to install and use
+Get files from the bikeshare projects, run the script and follow the prompts.
+
 ### Credits
 Most of it is my own work.
 
 List of references used:
 * [Explanation of recursive function](pythontutorial.net/python-basics/python-recursive-functions/)
+
+### Future updates
+Do not expect any
