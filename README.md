@@ -1,17 +1,24 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
-### Date created
-Include the date you created this project and README file.
+*Date of creation: 11/02/2021*
 
-### Project Title
-Replace the Project Title
+### Bikeshare Project
+
 
 ### Description
-Describe what your project is about and what it does
+This project was created to explore data from a public database of bike usage in some cities.
 
 ### Files used
-Include the files used
+The files used for this project were:
+* chicago.csv
+* new_york_city.csv
+* washington.csv
+
+Each of these files corresponds to bikeshare data from cities in the USA.
+
+*Some data may not be available for all cities*
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Most of it is my own work.
 
+List of references used:
+* [Explanation of recursive function](pythontutorial.net/python-basics/python-recursive-functions/)
