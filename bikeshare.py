@@ -223,7 +223,7 @@ def main():
         user_stats(df, city)
 
         raw = str(input('\nWould you like to see the data? Enter yes or no.\n')).strip().lower()
-        n = np.array(0)
+        n = np.array(0) # np.array is mutable, so changes inside function persists
         max_n = len(df)
         if raw == 'no': break
         elif raw == 'exit': exit()
@@ -241,3 +241,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    """I should've put the restart loop here"""
