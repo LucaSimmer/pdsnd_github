@@ -9,6 +9,10 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 MONTHS = {0: 'all', 1:'january', 2:'february', 3:'march', 4:'april', 5:'may', 6:'june'}
 DAYS = {0:'monday', 1:'tuesday', 2:'wednesday', 3:'thursday', 4:'friday', 5:'saturday', 6:'sunday', 7:'all'}
 
+""" Do not refactor anything!!!!!!!
+    May break the entire program!!!"""
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -62,18 +66,18 @@ def load_data(city, month, day):
     if month == 'all' and day == 'all': return df
 
     if month == 'all' and day != 'all':
-        day = ''.join([str(k) for k, v in DAYS.items() if v == day])
+        day = ''.join([str(key) for key, v in DAYS.items() if value == day])
         df = df[df['Start Time'].dt.dayofweek == int(day)]
         return df
 
     if month != 'all' and day == 'all':
-        month = ''.join([str(k) for k, v in MONTHS.items() if v == month])
+        month = ''.join([str(key) for key, value in MONTHS.items() if value == month])
         df = df[df['Start Time'].dt.month == int(month)]
         return df
 
     if month != 'all' and day != 'all':
-        day = ''.join([str(k) for k, v in DAYS.items() if v == day])
-        month = ''.join([str(k) for k, v in MONTHS.items() if v == month])
+        day = ''.join([str(key) for key, value in DAYS.items() if value == day])
+        month = ''.join([str(key) for key, value in MONTHS.items() if value == month])
         df = pd.DataFrame(df[(df['Start Time'].dt.month == int(month)) & (df['Start Time'].dt.dayofweek == int(day))])
         return df
 
@@ -219,7 +223,7 @@ def main():
         user_stats(df, city)
 
         raw = str(input('\nWould you like to see the data? Enter yes or no.\n')).strip().lower()
-        n = np.array(0)
+        n = np.array(0) # np.array is mutable, so changes inside function persists
         max_n = len(df)
         if raw == 'no': break
         elif raw == 'exit': exit()
@@ -237,3 +241,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    """I should've put the restart loop here"""
