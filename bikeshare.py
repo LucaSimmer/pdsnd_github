@@ -66,18 +66,18 @@ def load_data(city, month, day):
     if month == 'all' and day == 'all': return df
 
     if month == 'all' and day != 'all':
-        day = ''.join([str(k) for k, v in DAYS.items() if v == day])
+        day = ''.join([str(key) for key, v in DAYS.items() if value == day])
         df = df[df['Start Time'].dt.dayofweek == int(day)]
         return df
 
     if month != 'all' and day == 'all':
-        month = ''.join([str(k) for k, v in MONTHS.items() if v == month])
+        month = ''.join([str(key) for key, value in MONTHS.items() if value == month])
         df = df[df['Start Time'].dt.month == int(month)]
         return df
 
     if month != 'all' and day != 'all':
-        day = ''.join([str(k) for k, v in DAYS.items() if v == day])
-        month = ''.join([str(k) for k, v in MONTHS.items() if v == month])
+        day = ''.join([str(key) for key, value in DAYS.items() if value == day])
+        month = ''.join([str(key) for key, value in MONTHS.items() if value == month])
         df = pd.DataFrame(df[(df['Start Time'].dt.month == int(month)) & (df['Start Time'].dt.dayofweek == int(day))])
         return df
 
